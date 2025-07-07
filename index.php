@@ -1,4 +1,5 @@
 <?php
+$baseDeDonnees = new PDO('mysql:host=localhost;dbname=user;charset=utf8','root','');
 
 if(isset($_POST['username']) && isset($_POST['password'])){
         $usermanme = htmlspecialchars($_POST['username']);
@@ -7,7 +8,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     var_dump($_POST);
 }
 
-$baseDeDonnees = new PDO('mysql:host=localhost;dbname=user;charset=utf8','username','password');
+
 
 $username = $_POST['username'];
 $password = $_POST['password'];
