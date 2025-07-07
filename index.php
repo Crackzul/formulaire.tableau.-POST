@@ -9,6 +9,12 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
 $baseDeDonnees = new PDO('mysql:host=localhost;dbname=user;charset=utf8','username','password');
 
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$request = $baseDeDonnees -> prepare('INSERT INTO user (username,password)
+                                    VALUES(?,?');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
